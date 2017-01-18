@@ -11,7 +11,14 @@ for (var i = 0; i < plist.length; i++)\
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.tabs.executeScript({
-    code: blackify
-  });
+	chrome.tabs.executeScript({
+		code: blackify
+	});
+});
+
+// Keyboard shortcut
+chrome.commands.onCommand.addListener(function(command) {
+	chrome.tabs.executeScript({
+		code: blackify
+	});
 });
