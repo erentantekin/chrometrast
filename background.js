@@ -2,23 +2,24 @@
 //
 //
 
-var blackify = '\
-var plist = document.querySelectorAll("p, article");\
-for (var i = 0; i < plist.length; i++)\
-    plist[i].style.color = "rgba(0, 0, 0, 1.0)";\
-	//plist[i].style.cssText = "color:rgba(0, 0, 0, 1.0) !important";\
-'
-
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
 	chrome.tabs.executeScript({
-		code: blackify
+		file: "blackify.js"
 	});
 });
 
 // Keyboard shortcut
 chrome.commands.onCommand.addListener(function(command) {
-	chrome.tabs.executeScript({
-		code: blackify
-	});
+	if (command==="blackify") {
+		chrome.tabs.executeScript({
+			file: "blackify.js"
+		});
+	}
+	if (command==="unblackify") {
+		chrome.tabs.executeScript({
+			file: "unblackify.js"
+		});		
+	}
 });
+

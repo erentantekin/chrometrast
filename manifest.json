@@ -6,7 +6,7 @@
             "128": "icon128.png",
             "256": "icon256.png"
            },
-  "version": "1.2",
+  "version": "1.3",
   "permissions": [
     "activeTab"
   ],
@@ -15,16 +15,33 @@
     "persistent": false
   },
   "commands": {
-    "toggle-feature-foo": {
+    "blackify": {
       "suggested_key": {
-          "default": "Ctrl+B",
-          "mac": "Command+B"
+          "default": "Ctrl+Shift+B",
+          "mac": "Command+Shift+B"
       },
       "description": "Blackify"
+    },
+    "unblackify": {
+      "suggested_key": {
+          "default": "Alt+Shift+B",
+          "mac": "Alt+Shift+B"
+      },
+      "description": "Unblackify"
     }
   },
   "browser_action": {
-    "default_title": "Make text black again"
+    "default_title": "Blackify text"
   },
+  "content_scripts": [
+        {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+            ],
+        "js": ["blackify.js"],
+        "run_at": "document_end"
+        }
+    ], 
   "manifest_version": 2
 }
