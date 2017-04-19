@@ -9,7 +9,7 @@ for (var i = 0; i < plist.length; i++) {
 
 function getRGB(element) {
 	var col = window.getComputedStyle(element, null).color
-	col = col.slice(4,-1).split(",")
+	col = col.slice(0,-1).split("(")[1].split(",")
 	return col
 }
 
