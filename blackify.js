@@ -2,7 +2,7 @@ var plist = document.querySelectorAll("p, article")
 
 for (var i = 0; i < plist.length; i++) {
 	if (isRGBDark(getRGB(plist[i]))) {
-		plist[i].style.cssText = "color:rgba(0, 0, 0, 1.0) !important"
+		plist[i].style.color = "rgba(0, 0, 0, 1.0)"
 	}
 }
 
