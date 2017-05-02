@@ -14,6 +14,6 @@ function getRGB(element) {
 }
 
 function isRGBDark(rgbArray) {
-	var val=85
+	var val=105
 	return rgbArray[0]<val && rgbArray[1]<val && rgbArray[2]<val
 }
