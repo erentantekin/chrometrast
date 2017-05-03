@@ -1,3 +1,3 @@
-# chrometrast
+# Chrometrast
 
-increases contrast by making text black
+A Chrome extension to increase contrast by making text black.
