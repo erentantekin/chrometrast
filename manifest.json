@@ -6,7 +6,7 @@
             "128": "icon128.png",
             "256": "icon256.png"
            },
-  "version": "1.3",
+  "version": "1.4",
   "permissions": [
     "activeTab"
   ],
