@@ -1,11 +1,12 @@
-var plist = document.querySelectorAll("p, article")
+var plist = document.querySelectorAll("p, article, div")
 
-for (var i = 0; i < plist.length; i++) {
-	if (isRGBDark(getRGB(plist[i]))) {
-		plist[i].style.color = "rgba(0, 0, 0, 1.0)"
+window.onload = function() {
+	for (var i = 0; i < plist.length; i++) {
+		if (isRGBDark(getRGB(plist[i]))) {
+			plist[i].style.color = "rgba(0, 0, 0, 1.0)"
+		}
 	}
 }
-
 
 function getRGB(element) {
 	var col = window.getComputedStyle(element, null).color
